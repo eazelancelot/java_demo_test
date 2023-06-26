@@ -6,7 +6,7 @@ import java.util.Map;
 
 import com.example.java_demo_test.entity.PersonInfo;
 
-public class PersonInfoDaoImpl extends BaseDao {
+public class PersonInfo2DaoImpl extends BaseDao {
 	
 	public List<PersonInfo> doQueryByAge(int age){
 		StringBuffer sb = new StringBuffer();

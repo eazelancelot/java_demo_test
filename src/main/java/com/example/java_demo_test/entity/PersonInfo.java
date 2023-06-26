@@ -32,6 +32,13 @@ public class PersonInfo {
 		this.name = name;
 	}
 
+	public PersonInfo(String id, String name, int age) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
 	public PersonInfo(String id, String name, int age, String city) {
 		super();
 		this.id = id;

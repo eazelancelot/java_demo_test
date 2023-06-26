@@ -9,6 +9,8 @@ public class GetPersonInfoResponse {
 	private PersonInfo personInfo;
 
 	private List<PersonInfo> personInfoList;
+	
+	private String code;
 
 	private String message;
 
@@ -18,6 +20,12 @@ public class GetPersonInfoResponse {
 
 	public GetPersonInfoResponse(String message) {
 		super();
+		this.message = message;
+	}
+
+	public GetPersonInfoResponse(String code, String message) {
+		super();
+		this.code = code;
 		this.message = message;
 	}
 
@@ -55,6 +63,14 @@ public class GetPersonInfoResponse {
 
 	public void setPersonInfoList(List<PersonInfo> personInfoList) {
 		this.personInfoList = personInfoList;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 }

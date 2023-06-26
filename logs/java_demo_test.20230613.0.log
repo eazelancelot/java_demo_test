@@ -1,0 +1,239 @@
+09:32:38.983 INFO  [main][SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:305)] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.java_demo_test.RegisterTest], using SpringBootContextLoader
+09:32:38.994 INFO  [main][AbstractContextLoader.generateDefaultLocations(AbstractContextLoader.java:264)] Could not detect default resource locations for test class [com.example.java_demo_test.RegisterTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:32:39.271 INFO  [main][SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245)] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:32:39.305 INFO  [main][SpringBootTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174)] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@56e07a08, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@35d6ca49, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1950e8a6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47289387, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@12cd9150, org.springframework.test.context.support.DirtiesContextTestExecutionListener@114a85c2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f415a95, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cf65451, org.springframework.test.context.event.EventPublishingTestExecutionListener@724f138e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37eeec90, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@32fe9d0a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@c9413d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64da2a7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46074492, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d78795]
+09:32:39.778 INFO  [main][RegisterTest.logStarting(StartupInfoLogger.java:55)] Starting RegisterTest using Java 17.0.2 on DESKTOP-E665DAQ with PID 14416 (started by ACER in D:\java_project\java_demo_test)
+09:32:39.780 INFO  [main][RegisterTest.logStartupProfileInfo(SpringApplication.java:631)] No active profile set, falling back to 1 default profile: "default"
+09:32:41.348 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:32:41.527 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 157 ms. Found 7 JPA repository interfaces.
+09:32:42.649 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+09:32:43.076 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+09:32:43.320 INFO  [main][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+09:32:43.403 INFO  [main][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+09:32:43.669 INFO  [main][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:32:43.971 INFO  [main][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09:32:44.378 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.java_demo_test.entity.NewMenu2Id
+09:32:44.948 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.java_demo_test.entity.NewMenu2Id
+09:32:45.515 INFO  [main][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:32:45.529 INFO  [main][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:32:47.359 WARN  [main][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:32:48.733 INFO  [main][RegisterTest.logStarted(StartupInfoLogger.java:61)] Started RegisterTest in 9.363 seconds (JVM running for 12.74)
+09:32:59.432 INFO  [SpringApplicationShutdownHook][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+09:32:59.435 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-1 - Shutdown initiated...
+09:32:59.445 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-1 - Shutdown completed.
+09:33:09.049 INFO  [main][SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:305)] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.java_demo_test.RegisterTest], using SpringBootContextLoader
+09:33:09.060 INFO  [main][AbstractContextLoader.generateDefaultLocations(AbstractContextLoader.java:264)] Could not detect default resource locations for test class [com.example.java_demo_test.RegisterTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:33:09.284 INFO  [main][SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245)] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:33:09.308 INFO  [main][SpringBootTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174)] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@56e07a08, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@35d6ca49, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1950e8a6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47289387, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@12cd9150, org.springframework.test.context.support.DirtiesContextTestExecutionListener@114a85c2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f415a95, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cf65451, org.springframework.test.context.event.EventPublishingTestExecutionListener@724f138e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37eeec90, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@32fe9d0a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@c9413d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64da2a7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46074492, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d78795]
+09:33:09.724 INFO  [main][RegisterTest.logStarting(StartupInfoLogger.java:55)] Starting RegisterTest using Java 17.0.2 on DESKTOP-E665DAQ with PID 13712 (started by ACER in D:\java_project\java_demo_test)
+09:33:09.725 INFO  [main][RegisterTest.logStartupProfileInfo(SpringApplication.java:631)] No active profile set, falling back to 1 default profile: "default"
+09:33:10.790 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:33:10.925 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 122 ms. Found 7 JPA repository interfaces.
+09:33:11.726 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+09:33:11.979 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+09:33:12.225 INFO  [main][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+09:33:12.294 INFO  [main][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+09:33:12.532 INFO  [main][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:33:12.785 INFO  [main][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09:33:13.150 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.java_demo_test.entity.NewMenu2Id
+09:33:13.150 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.java_demo_test.entity.NewMenu2Id
+09:33:13.627 INFO  [main][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:33:13.641 INFO  [main][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:33:15.137 WARN  [main][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:33:16.374 INFO  [main][RegisterTest.logStarted(StartupInfoLogger.java:61)] Started RegisterTest in 7.009 seconds (JVM running for 8.864)
+09:33:18.929 INFO  [SpringApplicationShutdownHook][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+09:33:18.932 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-1 - Shutdown initiated...
+09:33:18.941 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-1 - Shutdown completed.
+09:33:31.966 INFO  [main][JavaDemoTestApplication.logStarting(StartupInfoLogger.java:55)] Starting JavaDemoTestApplication using Java 17.0.2 on DESKTOP-E665DAQ with PID 3844 (D:\java_project\java_demo_test\bin\main started by ACER in D:\java_project\java_demo_test)
+09:33:31.974 INFO  [main][JavaDemoTestApplication.logStartupProfileInfo(SpringApplication.java:631)] No active profile set, falling back to 1 default profile: "default"
+09:33:32.914 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:33:33.013 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 86 ms. Found 7 JPA repository interfaces.
+09:33:34.254 INFO  [main][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8080 (http)
+09:33:34.271 INFO  [main][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8080"]
+09:33:34.272 INFO  [main][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+09:33:34.273 INFO  [main][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.73]
+09:33:34.409 INFO  [main][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+09:33:34.409 INFO  [main][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 2365 ms
+09:33:34.575 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+09:33:34.863 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+09:33:35.077 INFO  [main][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+09:33:35.146 INFO  [main][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+09:33:35.403 INFO  [main][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:33:35.631 INFO  [main][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09:33:35.987 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.java_demo_test.entity.NewMenu2Id
+09:33:35.988 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.java_demo_test.entity.NewMenu2Id
+09:33:36.487 INFO  [main][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:33:36.508 INFO  [main][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:33:37.846 WARN  [main][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:33:38.679 INFO  [main][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8080"]
+09:33:38.711 INFO  [main][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8080 (http) with context path ''
+09:33:38.727 INFO  [main][JavaDemoTestApplication.logStarted(StartupInfoLogger.java:61)] Started JavaDemoTestApplication in 7.291 seconds (JVM running for 8.411)
+09:34:14.602 INFO  [http-nio-8080-exec-1][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:34:14.602 INFO  [http-nio-8080-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+09:34:14.603 INFO  [http-nio-8080-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 1 ms
+09:36:36.643 INFO  [main][SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:305)] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.java_demo_test.RegisterTest], using SpringBootContextLoader
+09:36:36.653 INFO  [main][AbstractContextLoader.generateDefaultLocations(AbstractContextLoader.java:264)] Could not detect default resource locations for test class [com.example.java_demo_test.RegisterTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:36:36.877 INFO  [main][SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245)] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:36:36.901 INFO  [main][SpringBootTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174)] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@56e07a08, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@35d6ca49, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1950e8a6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47289387, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@12cd9150, org.springframework.test.context.support.DirtiesContextTestExecutionListener@114a85c2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f415a95, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cf65451, org.springframework.test.context.event.EventPublishingTestExecutionListener@724f138e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37eeec90, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@32fe9d0a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@c9413d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64da2a7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46074492, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d78795]
+09:36:37.309 INFO  [main][RegisterTest.logStarting(StartupInfoLogger.java:55)] Starting RegisterTest using Java 17.0.2 on DESKTOP-E665DAQ with PID 1956 (started by ACER in D:\java_project\java_demo_test)
+09:36:37.310 INFO  [main][RegisterTest.logStartupProfileInfo(SpringApplication.java:631)] No active profile set, falling back to 1 default profile: "default"
+09:36:38.232 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:36:38.339 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 91 ms. Found 7 JPA repository interfaces.
+09:36:39.132 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+09:36:39.376 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+09:36:39.634 INFO  [main][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+09:36:39.703 INFO  [main][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+09:36:39.955 INFO  [main][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:36:40.198 INFO  [main][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09:36:40.551 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.java_demo_test.entity.NewMenu2Id
+09:36:40.552 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.java_demo_test.entity.NewMenu2Id
+09:36:41.019 INFO  [main][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:36:41.032 INFO  [main][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:36:42.529 WARN  [main][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:36:43.821 INFO  [main][RegisterTest.logStarted(StartupInfoLogger.java:61)] Started RegisterTest in 6.866 seconds (JVM running for 8.648)
+09:36:45.394 INFO  [SpringApplicationShutdownHook][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+09:36:45.396 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-1 - Shutdown initiated...
+09:36:45.406 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-1 - Shutdown completed.
+09:36:53.574 INFO  [main][SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:305)] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.java_demo_test.RegisterTest], using SpringBootContextLoader
+09:36:53.584 INFO  [main][AbstractContextLoader.generateDefaultLocations(AbstractContextLoader.java:264)] Could not detect default resource locations for test class [com.example.java_demo_test.RegisterTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:36:53.805 INFO  [main][SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245)] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:36:53.828 INFO  [main][SpringBootTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174)] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@56e07a08, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@35d6ca49, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1950e8a6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47289387, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@12cd9150, org.springframework.test.context.support.DirtiesContextTestExecutionListener@114a85c2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f415a95, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cf65451, org.springframework.test.context.event.EventPublishingTestExecutionListener@724f138e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37eeec90, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@32fe9d0a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@c9413d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64da2a7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46074492, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d78795]
+09:36:54.220 INFO  [main][RegisterTest.logStarting(StartupInfoLogger.java:55)] Starting RegisterTest using Java 17.0.2 on DESKTOP-E665DAQ with PID 17904 (started by ACER in D:\java_project\java_demo_test)
+09:36:54.222 INFO  [main][RegisterTest.logStartupProfileInfo(SpringApplication.java:631)] No active profile set, falling back to 1 default profile: "default"
+09:36:55.167 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:36:55.271 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 87 ms. Found 7 JPA repository interfaces.
+09:36:56.059 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+09:36:56.288 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+09:36:56.549 INFO  [main][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+09:36:56.624 INFO  [main][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+09:36:56.860 INFO  [main][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:36:57.095 INFO  [main][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09:36:57.443 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.java_demo_test.entity.NewMenu2Id
+09:36:57.443 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.java_demo_test.entity.NewMenu2Id
+09:36:57.923 INFO  [main][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:36:57.939 INFO  [main][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:36:59.519 WARN  [main][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:37:00.783 INFO  [main][RegisterTest.logStarted(StartupInfoLogger.java:61)] Started RegisterTest in 6.901 seconds (JVM running for 8.706)
+09:37:02.249 INFO  [SpringApplicationShutdownHook][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+09:37:02.252 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-1 - Shutdown initiated...
+09:37:02.261 INFO  [SpringApplicationShutdownHook][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-1 - Shutdown completed.
+09:37:08.545 INFO  [main][JavaDemoTestApplication.logStarting(StartupInfoLogger.java:55)] Starting JavaDemoTestApplication using Java 17.0.2 on DESKTOP-E665DAQ with PID 17556 (D:\java_project\java_demo_test\bin\main started by ACER in D:\java_project\java_demo_test)
+09:37:08.551 INFO  [main][JavaDemoTestApplication.logStartupProfileInfo(SpringApplication.java:631)] No active profile set, falling back to 1 default profile: "default"
+09:37:09.481 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:37:09.582 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 88 ms. Found 7 JPA repository interfaces.
+09:37:10.607 INFO  [main][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8080 (http)
+09:37:10.619 INFO  [main][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8080"]
+09:37:10.620 INFO  [main][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+09:37:10.620 INFO  [main][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.73]
+09:37:10.776 INFO  [main][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+09:37:10.777 INFO  [main][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 2158 ms
+09:37:10.936 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+09:37:11.178 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+09:37:11.377 INFO  [main][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+09:37:11.439 INFO  [main][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+09:37:11.657 INFO  [main][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:37:11.813 INFO  [main][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09:37:12.153 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.java_demo_test.entity.NewMenu2Id
+09:37:12.153 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.java_demo_test.entity.NewMenu2Id
+09:37:12.618 INFO  [main][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:37:12.631 INFO  [main][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:37:13.789 WARN  [main][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:37:14.517 INFO  [main][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8080"]
+09:37:14.573 INFO  [main][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8080 (http) with context path ''
+09:37:14.583 INFO  [main][JavaDemoTestApplication.logStarted(StartupInfoLogger.java:61)] Started JavaDemoTestApplication in 6.539 seconds (JVM running for 7.629)
+09:37:19.691 INFO  [http-nio-8080-exec-2][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:37:19.691 INFO  [http-nio-8080-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+09:37:19.693 INFO  [http-nio-8080-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 2 ms
+12:24:19.663 INFO  [main][JavaDemoTestApplication.logStarting(StartupInfoLogger.java:55)] Starting JavaDemoTestApplication using Java 17.0.2 on DESKTOP-E665DAQ with PID 5604 (D:\java_project\java_demo_test\bin\main started by ACER in D:\java_project\java_demo_test)
+12:24:19.669 INFO  [main][JavaDemoTestApplication.logStartupProfileInfo(SpringApplication.java:631)] No active profile set, falling back to 1 default profile: "default"
+12:24:20.832 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:24:20.938 INFO  [main][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 91 ms. Found 7 JPA repository interfaces.
+12:24:22.004 INFO  [main][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8080 (http)
+12:24:22.019 INFO  [main][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8080"]
+12:24:22.020 INFO  [main][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+12:24:22.021 INFO  [main][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.73]
+12:24:22.219 INFO  [main][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+12:24:22.219 INFO  [main][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 2483 ms
+12:24:22.397 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+12:24:22.705 INFO  [main][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+12:24:22.941 INFO  [main][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+12:24:23.020 INFO  [main][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+12:24:23.291 INFO  [main][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:24:23.486 INFO  [main][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+12:24:23.825 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.java_demo_test.entity.NewMenu2Id
+12:24:23.825 WARN  [main][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.java_demo_test.entity.NewMenu2Id
+12:24:24.321 INFO  [main][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:24:24.337 INFO  [main][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:24:25.625 WARN  [main][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:24:26.438 INFO  [main][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8080"]
+12:24:26.476 INFO  [main][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8080 (http) with context path ''
+12:24:26.490 INFO  [main][JavaDemoTestApplication.logStarted(StartupInfoLogger.java:61)] Started JavaDemoTestApplication in 7.381 seconds (JVM running for 8.686)
+12:24:40.290 INFO  [http-nio-8080-exec-2][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:24:40.290 INFO  [http-nio-8080-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+12:24:40.290 INFO  [http-nio-8080-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 0 ms
+12:24:43.485 ERROR [http-nio-8080-exec-3][[dispatcherServlet].log(DirectJDKLog.java:175)] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No cache could be resolved for 'Builder[public com.example.java_demo_test.vo.RegisterResponse com.example.java_demo_test.service.impl.RegisterServiceImpl.getRegTime(java.lang.String,java.lang.String)] caches=[] | key='#account' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@3eff3ab4'. At least one cache should be provided per cache operation.] with root cause
+java.lang.IllegalStateException: No cache could be resolved for 'Builder[public com.example.java_demo_test.vo.RegisterResponse com.example.java_demo_test.service.impl.RegisterServiceImpl.getRegTime(java.lang.String,java.lang.String)] caches=[] | key='#account' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@3eff3ab4'. At least one cache should be provided per cache operation.
+	at org.springframework.cache.interceptor.CacheAspectSupport.getCaches(CacheAspectSupport.java:255)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CacheOperationContext.<init>(CacheAspectSupport.java:724)
+	at org.springframework.cache.interceptor.CacheAspectSupport.getOperationContext(CacheAspectSupport.java:265)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CacheOperationContexts.<init>(CacheAspectSupport.java:615)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.example.java_demo_test.service.impl.RegisterServiceImpl$$EnhancerBySpringCGLIB$$63f2b95b.getRegTime(<generated>)
+	at com.example.java_demo_test.controller.RegisterController.getRegTime(RegisterController.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:528)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)

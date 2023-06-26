@@ -14,8 +14,9 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
 import com.example.java_demo_test.constants.RtnCode;
+import com.example.java_demo_test.constants.RtnCode1;
 import com.example.java_demo_test.entity.PersonInfo;
-import com.example.java_demo_test.respository.PersonInfoDao;
+import com.example.java_demo_test.respository.PersonInfo2Dao;
 import com.example.java_demo_test.service.ifs.PersonInfoService;
 import com.example.java_demo_test.vo.GetPersonInfoResponse;
 import com.example.java_demo_test.vo.PersonInfoResponse;
@@ -26,15 +27,16 @@ public class PersonInfoServiceImpl implements PersonInfoService {
 	private Logger logger = LoggerFactory.getLogger(getClass()); // slf4j
 
 	@Autowired
-	private PersonInfoDao personInfoDao;
+	private PersonInfo2Dao personInfoDao;
 
 	@Transactional
 	@Override
 	public PersonInfoResponse addPersonInfo(List<PersonInfo> personInfoList) {
+		logger.info("addPersonInfo service");
 		// 防呆: 檢查參數
 		// 1. 檢查 List 是否為 null 或 空
 		if (CollectionUtils.isEmpty(personInfoList)) {
-			return new PersonInfoResponse(RtnCode.DATA_ERROR.getMessage());
+			return new PersonInfoResponse(RtnCode1.DATA_ERROR.getMessage());
 		}
 		// 2. 檢查 List 中的每項資訊(PersonInfo)
 		List<String> ids = new ArrayList<>();
@@ -88,29 +90,29 @@ public class PersonInfoServiceImpl implements PersonInfoService {
 //					.collect(Collectors.toList());
 			// saveList=A,B,E
 			personInfoDao.saveAll(saveList);
-			return new PersonInfoResponse(saveList, RtnCode.SUCCESSFUL.getMessage());
+			return new PersonInfoResponse(saveList, RtnCode1.SUCCESSFUL.getMessage());
 		}
 		// saveAll
 		personInfoDao.saveAll(personInfoList);
-		return new PersonInfoResponse(personInfoList, RtnCode.SUCCESSFUL.getMessage());
+		return new PersonInfoResponse(personInfoList, RtnCode1.SUCCESSFUL.getMessage());
 	}
 
 	@Override
 	public GetPersonInfoResponse getPersonInfoById(String id) {
 		// 檢查
 		if (!StringUtils.hasText(id)) {
-			return new GetPersonInfoResponse("id 不得為空!!");
+			return new GetPersonInfoResponse(RtnCode.CANNOT_EMPTY.getCode(), RtnCode.CANNOT_EMPTY.getMessage());
 		}
 		Optional<PersonInfo> op = personInfoDao.findById(id);
 		if (!op.isPresent()) {
-			return new GetPersonInfoResponse("資料不存在!!");
+			return new GetPersonInfoResponse(RtnCode.NOT_FOUND.getCode(), RtnCode.NOT_FOUND.getMessage());
 		}
-		return new GetPersonInfoResponse(op.get(), RtnCode.SUCCESSFUL.getMessage());
+		return new GetPersonInfoResponse(op.get(), RtnCode1.SUCCESSFUL.getMessage());
 	}
 
 	@Override
 	public GetPersonInfoResponse getAllPersonInfo() {
-		return new GetPersonInfoResponse(personInfoDao.findAll(), RtnCode.SUCCESSFUL.getMessage());
+		return new GetPersonInfoResponse(personInfoDao.findAll(), RtnCode1.SUCCESSFUL.getMessage());
 	}
 
 	@Override

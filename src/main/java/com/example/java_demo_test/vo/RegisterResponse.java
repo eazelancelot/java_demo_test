@@ -14,8 +14,18 @@ public class RegisterResponse {
 	
 	@JsonProperty("reg_time")
 	private LocalDateTime regTime;
-
+	
+	private String code;
+	
 	private String message;
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
 
 	public RegisterResponse() {
 		super();
@@ -26,9 +36,22 @@ public class RegisterResponse {
 		this.message = message;
 	}
 
+	public RegisterResponse(String code, String message) {
+		super();
+		this.code = code;
+		this.message = message;
+	}
+
 	public RegisterResponse(LocalDateTime regTime, String message) {
 		super();
 		this.regTime = regTime;
+		this.message = message;
+	}
+
+	public RegisterResponse(LocalDateTime regTime, String code, String message) {
+		super();
+		this.regTime = regTime;
+		this.code = code;
 		this.message = message;
 	}
 
