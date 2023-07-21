@@ -16,6 +16,8 @@ import com.example.java_demo_test.entity.PersonInfo;
 @Repository
 public interface PersonInfo2Dao extends JpaRepository<PersonInfo, String>{
 	
+	public List<PersonInfo> findByIdOrNameOrCity(String id, String name, String city);
+	
 	public List<PersonInfo> findByAgeGreaterThan(int age);
 	
 	public List<PersonInfo> findByAgeLessThanEqualOrderByAgeAsc(int age);

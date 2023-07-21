@@ -196,5 +196,11 @@ public class ApiTest {
 		System.out.println("str: " + str);
 		System.out.println("reverse str: " + sb.reverse().toString());
 	}
+	
+	@Test
+	public void doubleTest() {
+		Double d = null;
+		System.out.println(d < 0);
+	}
 
 }

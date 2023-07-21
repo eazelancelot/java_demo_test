@@ -190,6 +190,8 @@ public class RegisterTest {
 	
 	@Test
 	public void cacheableTest() {
+//		RegisterResponse res = service.login("A01", null);
+//		System.out.println(res.getMessage());
 		RegisterResponse res = service.getRegTime("018402", "weeee");
 		System.out.println(res.getRegTime());
 	}

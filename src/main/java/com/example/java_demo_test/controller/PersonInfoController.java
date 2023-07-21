@@ -23,7 +23,7 @@ public class PersonInfoController {
 	}
 	
 	@PostMapping(value = "get_person_info_by_id")
-	public GetPersonInfoResponse getPersonInfoById(@RequestBody GetPersonInfoRequest request) {
+	public GetPersonInfoResponse getPersonInfoById(@RequestBody GetPersonInfoRequest request) throws Exception {
 		return personInfoService.getPersonInfoById(request.getId());
 	}
 	

@@ -1,9 +1,12 @@
 package com.example.java_demo_test.vo;
 
+import org.springframework.lang.NonNull;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegisterRequest {
 
+	@NonNull
 	private String account;
 
 	private String pwd;

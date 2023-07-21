@@ -17,6 +17,7 @@ import com.example.java_demo_test.respository.RegisterDao;
 import com.example.java_demo_test.service.ifs.RegisterService;
 import com.example.java_demo_test.vo.RegisterRequest;
 import com.example.java_demo_test.vo.RegisterResponse;
+import com.example.java_demo_test.vo.RegisterResponse2;
 
 //@EnableScheduling
 @Service
@@ -32,6 +33,7 @@ public class RegisterServiceImpl implements RegisterService {
 	public RegisterResponse register(String account, String pwd) throws Exception {
 //		logger.info("register service");
 		if (!StringUtils.hasText(account) || !StringUtils.hasText(pwd)) {
+			logger.error("register error!!");
 			throw new Exception(RtnCode.CANNOT_EMPTY.getCode() + RtnCode.CANNOT_EMPTY.getMessage());
 //			logger.error("cannot empty!!");
 //			return new RegisterResponse(RtnCode.CANNOT_EMPTY.getCode(), RtnCode.CANNOT_EMPTY.getMessage());
@@ -68,6 +70,7 @@ public class RegisterServiceImpl implements RegisterService {
 		return new RegisterResponse(RtnCode.SUCCESSFUL.getCode(), RtnCode.SUCCESSFUL.getMessage());
 	}
 
+	@Cacheable(value = "account", key = "#account")
 	@Override
 	public RegisterResponse login(String account, String pwd) {
 		if (!StringUtils.hasText(account) || !StringUtils.hasText(pwd)) {
@@ -114,6 +117,40 @@ public class RegisterServiceImpl implements RegisterService {
 			return new RegisterResponse("Please login!!");
 		}
 		return new RegisterResponse(reg.getRegTime(), "Successful!!");
+	}
+	
+	//================================================================
+	
+	@Cacheable(value = "account", key = "#account")
+	@Override
+	public RegisterResponse2 login3(String account, String pwd) {
+		if (!StringUtils.hasText(account) || !StringUtils.hasText(pwd)) {
+			return new RegisterResponse2(RtnCode.CANNOT_EMPTY.getCode(), RtnCode.CANNOT_EMPTY.getMessage());
+		}
+		Register res = registerDao.findByAccountAndPwd(account, pwd);
+		if (res == null) {
+			return new RegisterResponse2(RtnCode.NOT_FOUND.getCode(), RtnCode.NOT_FOUND.getMessage());
+		}
+		if (!res.isActive()) {
+			return new RegisterResponse2(RtnCode.ACCOUNT_NOT_ACTIVED.getCode(), RtnCode.ACCOUNT_NOT_ACTIVED.getMessage());
+		}
+		return new RegisterResponse2(account, RtnCode.SUCCESSFUL.getCode(), RtnCode.SUCCESSFUL.getMessage());
+	}
+	
+	@Cacheable(value = "get_reg_time", key = "#account")
+	@Override
+	public RegisterResponse getRegTime3(String account, String pwd) {
+		if (!StringUtils.hasText(account) || !StringUtils.hasText(pwd)) {
+			return new RegisterResponse(RtnCode.PLEASE_LOGIN.getCode(), RtnCode.PLEASE_LOGIN.getMessage());
+		}
+		Register res = registerDao.findByAccountAndPwd(account, pwd);
+		if (res == null) {
+			return new RegisterResponse(RtnCode.NOT_FOUND.getCode(), RtnCode.NOT_FOUND.getMessage());
+		}
+		if (!res.isActive()) {
+			return new RegisterResponse(RtnCode.ACCOUNT_NOT_ACTIVED.getCode(), RtnCode.ACCOUNT_NOT_ACTIVED.getMessage());
+		}
+		return new RegisterResponse(res.getRegTime(), RtnCode.SUCCESSFUL.getCode(), RtnCode.SUCCESSFUL.getMessage());
 	}
 	
 	@Scheduled(cron = "0 * 14-16 * * *")

@@ -402,4 +402,10 @@ public class PersonInfoTest {
 //		int res = personInfoDao.batchUpdateName("台南", "台南市");
 		System.out.println(res);
 	}
+	
+	@Test
+	public void nullTest() {
+		List<PersonInfo> res = personInfo2Dao.findByIdOrNameOrCity(null, null, null);
+		System.out.println(res.size());
+	}
 }

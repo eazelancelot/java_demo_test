@@ -10,7 +10,7 @@ public interface PersonInfoService {
 	
 	public PersonInfoResponse addPersonInfo(List<PersonInfo> personInfoList);
 	
-	public GetPersonInfoResponse getPersonInfoById(String id);
+	public GetPersonInfoResponse getPersonInfoById(String id) throws Exception;
 	
 	public GetPersonInfoResponse getAllPersonInfo();
 	

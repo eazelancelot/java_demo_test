@@ -98,10 +98,11 @@ public class PersonInfoServiceImpl implements PersonInfoService {
 	}
 
 	@Override
-	public GetPersonInfoResponse getPersonInfoById(String id) {
+	public GetPersonInfoResponse getPersonInfoById(String id) throws Exception {
 		// ¿À¨d
 		if (!StringUtils.hasText(id)) {
-			return new GetPersonInfoResponse(RtnCode.CANNOT_EMPTY.getCode(), RtnCode.CANNOT_EMPTY.getMessage());
+			throw new Exception(RtnCode.CANNOT_EMPTY.getCode().toString() + RtnCode.CANNOT_EMPTY.getMessage().toString());
+//			return new GetPersonInfoResponse(RtnCode.CANNOT_EMPTY.getCode(), RtnCode.CANNOT_EMPTY.getMessage());
 		}
 		Optional<PersonInfo> op = personInfoDao.findById(id);
 		if (!op.isPresent()) {
