@@ -36,5 +36,12 @@ public class UsersTest {
 		usersDao.save(new Users(str));
 		System.out.println(str);
 	}
+	
+	@Test
+	public void getLeastAutoIncrementId() {
+		System.out.println(usersDao.selectLastInsertId());
+		usersDao.saveAndFlush(new Users("name_01"));
+		System.out.println(usersDao.selectLastInsertId());
+	}
 
 }

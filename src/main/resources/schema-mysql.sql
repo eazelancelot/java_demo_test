@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS `register1` (
-  `account` varchar(20) NOT NULL,
-  `pwd` varchar(45) NOT NULL,
-  `reg_time` datetime DEFAULT NULL,
-  `active` tinyint NOT NULL DEFAULT 0,
-  PRIMARY KEY (`account`)
-);
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+SET GLOBAL information_schema_stats_expiry=0;

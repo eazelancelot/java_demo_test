@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.java_demo_test.entity.Register;
 import com.example.java_demo_test.respository.RegisterDao;
@@ -194,6 +195,23 @@ public class RegisterTest {
 //		System.out.println(res.getMessage());
 		RegisterResponse res = service.getRegTime("018402", "weeee");
 		System.out.println(res.getRegTime());
+	}
+	
+	@Transactional
+	@Test
+	public void transactionTest() {
+		List<Register> list = new ArrayList<>(Arrays.asList(//
+				new Register("YY01", "YY123"),//
+				new Register("YY02", "YY123"),//
+				new Register("YY03", "YY123")));
+		saveAllTest(list);
+	}
+	
+	private void saveAllTest(List<Register> list) {
+		for(Register item : list) {
+			System.out.println(item.getAccount());
+			registerDao.save(item);
+		}
 	}
 
 }
