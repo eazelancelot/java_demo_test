@@ -31,6 +31,7 @@ public class ApiTest {
 	public void getPropertiesValue() {
 		System.out.println(heartbeat);
 		String str = String.valueOf('e');
+		System.out.println("=================");
 	}
 
 	@SuppressWarnings("unchecked")
